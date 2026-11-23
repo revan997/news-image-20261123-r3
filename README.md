@@ -5,7 +5,7 @@
 [![reward](https://make.fun/badge/news-image-20261123/revan997/news-image-20261123-r3/reward.svg)](https://make.fun/bounty/news-image-20261123)
 
 A one-page newspaper front page summing up the world's news of Monday,
-23 November 2026 — 35 verified stories in a single 1024×1024 image.
+23 November 2026 — 39 verified stories in a single 1024×1024 image.
 
 ## The image
 
@@ -17,7 +17,7 @@ A one-page newspaper front page summing up the world's news of Monday,
   in the Banten factory fire, 1,000+ Delta flights delayed, 99% of Gaza
   contaminated, $120bn COP31 fund dropped.
 - **13 more stories** in cards, a UTC timeline of the day, a world map of
-  where it happened (7 regions), and 20 more in "Also on Monday".
+  where it happened (7 regions), and 23 more in "Also on Monday".
 - **Date check:** every story on the page happened, or was first reported,
   on Monday 23 November 2026. Weekend events (21–22 Nov) appear as reported
   on Monday; disputed claims are attributed.

@@ -182,41 +182,37 @@ BIG = [
 
 CARDS = [
     ("AFRICA", "LIBYA: RUSSIAN WARSHIP SUNK",
-     "Ukrainian sea drones hit the corvette Merkury at Benghazi; Zelenskyy "
-     "says the ship was sunk; 10 hurt."),
+     "Ukrainian sea drones hit the corvette Merkury at Benghazi; 10 hurt."),
     ("EUROPE", "DYMER TOLL RISES TO 11",
-     "Russian drone strike flattens a five-storey block near Kyiv; rescuers "
-     "pull survivors from rubble as the toll climbs to 11."),
+     "Russian drone strike flattens a five-storey block near Kyiv; "
+     "11 killed."),
     ("EUROPE", "POLAND: RUSSIAN MISSILES",
-     "Three fallen objects were Russian Kh-101 cruise missiles; Warsaw "
-     "calls emergency NATO talks for Monday."),
+     "Three fallen objects were Russian Kh-101 cruise missiles; NATO "
+     "talks Monday."),
     ("NORTH AMERICA", "'EL CHAPO ISIDRO' CAUGHT",
      "FBI most-wanted Sinaloa cartel boss captured by Mexican military; "
      "11 dead."),
     ("ASIA", "CANDY FACTORY FIRE KILLS 24",
      "Blaze at a candy factory in Cikande, Banten, leaves 24 dead and about "
-     "30 missing; toll confirmed Monday."),
+     "30 missing."),
     ("NORTH AMERICA", "DELTA CHAOS: 1,000+ FLIGHTS",
-     "Weight-and-balance failure delays over 1,000 Delta flights Sunday; "
-     "Atlanta still counts delays Monday."),
+     "Weight-and-balance failure delays over 1,000 Delta flights Sunday."),
     ("ASIA", "SEOUL MINISTER QUITS",
-     "Education Minister Choi Kyo-jin resigns after last-minute anti-"
-     "cheating rules sow chaos at the CSAT exam."),
+     "Education Minister Choi Kyo-jin resigns after anti-cheating rules "
+     "sow CSAT chaos."),
     ("EUROPE", "FRANCE MARCHES, WEEK SIX",
      "Tens of thousands rally for a sixth Saturday over living costs and "
      "the 'licence to kill' police law."),
     ("EUROPE", "153 DRONES IN ONE NIGHT",
      "Russia launches 153 strike drones overnight; Ukraine says 134 "
-     "neutralised by 08:00, but impacts hit 11 sites."),
+     "neutralised."),
     ("NORTH AMERICA", "WALL STREET BOUNCES BACK",
-     "Nasdaq futures jump 3% after the worst week since March 2020; S&P "
-     "sits 11.6% below its 6 October record."),
+     "Nasdaq futures jump 3% after the worst week since March 2020."),
     ("EUROPE", "IMO NET-ZERO TALKS OPEN",
-     "IMO working group opens in London to decide the Net-Zero Framework; "
-     "green groups and shipowners demand adoption."),
+     "IMO working group opens in London to decide the Net-Zero Framework."),
     ("NORTH AMERICA", "STATES SUE MUSK'S SPACEX",
-     "Virginia and Oregon sue SpaceX over Grok's non-consensual sexual "
-     "deepfakes, including 20,000+ images of children."),
+     "Virginia and Oregon sue SpaceX over Grok deepfakes; 20,000+ images "
+     "of children."),
     ("EUROPE", "BELGIUM'S SKIES GO DARK",
      "Air traffic controllers join a national austerity strike; all flights "
      "cancelled 07:00–21:00; 429 flights hit."),
@@ -241,13 +237,6 @@ TIMELINE = [
 ]
 
 ALSO_ON = [
-    "Democrats also take the Senate, 56–44",
-    "Hubbard beats Foxx by just 330 votes",
-    "COP31 becomes the longest climate summit ever",
-    "Merkury sunk off Benghazi by sea drones",
-    "Dymer toll rises to 11 as rubble is cleared",
-    "NATO meets after Russian missiles hit Poland",
-    "'El Chapo Isidro' captured in Mexico",
     "BepiColombo only 2nd craft to orbit Mercury",
     "Alcaraz wins his first ATP Finals title",
     "Márquez seals an eighth MotoGP crown",
@@ -261,6 +250,16 @@ ALSO_ON = [
     "Shuri Castle reopens its doors",
     "Lahore chokes on AQI 538",
     "UK set to host 2035 Women's World Cup",
+    "Gaza truck strike kills 3; IDF, Gaza dispute victims",
+    "Eisenkot calls settler arson 'Jewish terrorism'",
+    "Liverpool rout Man Utd 4–0 at Anfield",
+    "Congress leaves; funding expires 11 Dec",
+    "Reuters links 17+ Russian women to Epstein ring",
+    "Iran strikes Bahrain site; two hurt",
+    "Armenia draft drops Karabakh claim",
+    "Ukraine drones hit 3 Russian oil sites",
+    "Slovyansk glide bomb kills 2",
+    "Shahed drone hits Kharkiv kindergarten; 2 hurt",
 ]
 
 
@@ -285,7 +284,7 @@ def main():
     d.text(((W - d.textlength(date, font=f_date)) // 2, 82), date,
            font=f_date, fill=RED)
     f_sub = font(SANS, 11)
-    sub = "THE DAY'S NEWS  •  35 STORIES  •  IN ONE PAGE"
+    sub = "THE DAY'S NEWS  •  39 STORIES  •  IN ONE PAGE"
     d.text(((W - d.textlength(sub, font=f_sub)) // 2, 108), sub,
            font=f_sub, fill=INK_SOFT)
     hrule(d, 24, W - 24, 126, fill=INK, width=2)
@@ -389,12 +388,12 @@ def main():
     ay = 920
     section_head(d, 24, ay, "ALSO ON MONDAY", W - 48)
     f_ao = font(SANS, 9)
-    cols, rows = 4, 5
+    cols, rows = 4, 6
     ao_w = (W - 48 - 3 * 16) // cols
     for i, item in enumerate(ALSO_ON):
         col, row = divmod(i, rows)
         x = 24 + col * (ao_w + 16)
-        yy = ay + 26 + row * 12
+        yy = ay + 24 + row * 10
         line = "•  " + item
         if d.textlength(line, font=f_ao) > ao_w:
             while line and d.textlength(line + "…", font=f_ao) > ao_w:
@@ -407,7 +406,7 @@ def main():
     hrule(d, 24, W - 24, fy, fill=INK, width=1)
     f_ft = font(SANS, 9)
     foot = ("Sources: AP  •  Reuters  •  AFP  •  Oxfam–CEOBS  •  h.ua  •  "
-            "Skeyes  —  All 35 stories verified against 23 November 2026 "
+            "Skeyes  —  All 39 stories verified against 23 November 2026 "
             "reporting.  Map: N. America • S. America • Europe • M. East • "
             "Africa • Asia • Oceania.")
     d.text((24, fy + 4), foot, font=f_ft, fill=INK_SOFT)
